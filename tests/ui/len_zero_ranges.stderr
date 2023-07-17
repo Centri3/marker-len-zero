@@ -1,0 +1,16 @@
+warning: length comparison to zero
+ --> $DIR/len_zero_ranges.rs:9:17
+  |
+9 |         let _ = (0..42).len() == 0;
+  |                 ^^^^^^^^^^^^^^^^^^ help: using `is_empty` is clearer and more explicit: `(0..42).is_empty()`
+  |
+  = note: `#[warn(marker::len_zero)]` on by default
+
+warning: length comparison to zero
+  --> $DIR/len_zero_ranges.rs:13:17
+   |
+13 |         let _ = (0_u8..=42).len() == 0;
+   |                 ^^^^^^^^^^^^^^^^^^^^^^ help: using `is_empty` is clearer and more explicit: `(0_u8..=42).is_empty()`
+
+warning: 2 warnings emitted
+

@@ -1,0 +1,58 @@
+warning: length comparison to zero
+  --> $DIR/len_zero.rs:82:8
+   |
+82 |     if x.len() == 0 {
+   |        ^^^^^^^^^^^^ help: using `is_empty` is clearer and more explicit: `x.is_empty()`
+   |
+   = note: `#[warn(marker::len_zero)]` on by default
+
+warning: length comparison to zero
+  --> $DIR/len_zero.rs:86:8
+   |
+86 |     if "".len() == 0 {}
+   |        ^^^^^^^^^^^^^ help: using `is_empty` is clearer and more explicit: `"".is_empty()`
+
+warning: length comparison to zero
+   --> $DIR/len_zero.rs:106:8
+    |
+106 |     if y.len() == 0 {
+    |        ^^^^^^^^^^^^ help: using `is_empty` is clearer and more explicit: `y.is_empty()`
+
+warning: length comparison to zero
+   --> $DIR/len_zero.rs:118:8
+    |
+118 |     if has_is_empty.len() == 0 {
+    |        ^^^^^^^^^^^^^^^^^^^^^^^ help: using `is_empty` is clearer and more explicit: `has_is_empty.is_empty()`
+
+warning: length comparison to zero
+   --> $DIR/len_zero.rs:121:8
+    |
+121 |     if has_is_empty.len() != 0 {
+    |        ^^^^^^^^^^^^^^^^^^^^^^^ help: using `!is_empty` is clearer and more explicit: `!has_is_empty.is_empty()`
+
+warning: length comparison to zero
+   --> $DIR/len_zero.rs:167:8
+    |
+167 |     if with_is_empty.len() == 0 {
+    |        ^^^^^^^^^^^^^^^^^^^^^^^^ help: using `is_empty` is clearer and more explicit: `with_is_empty.is_empty()`
+
+warning: length comparison to zero
+   --> $DIR/len_zero.rs:173:8
+    |
+173 |     if has_wrong_is_empty.len() == 0 {
+    |        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: using `is_empty` is clearer and more explicit: `has_wrong_is_empty.is_empty()`
+
+warning: length comparison to zero
+   --> $DIR/len_zero.rs:180:5
+    |
+180 |     (has_is_empty.len() == 0).then(|| println!("Or this!"));
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^ help: using `is_empty` is clearer and more explicit: `has_is_empty.is_empty()`
+
+warning: length comparison to zero
+   --> $DIR/len_zero.rs:184:8
+    |
+184 |     if b.len() != 0 {}
+    |        ^^^^^^^^^^^^ help: using `!is_empty` is clearer and more explicit: `!b.is_empty()`
+
+warning: 9 warnings emitted
+
